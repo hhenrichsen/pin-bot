@@ -11,6 +11,7 @@ const debug = process.env.DEBUG.toLowerCase() == 'true';
 
 client.once('ready', () => {
     console.log(chalk.green('Ready!'));
+    client.user.setActivity(`React with ${REACTION_NAME} to pin a message!`)
 });
 
 client.on('messageReactionAdd', async (reaction, _) => {
